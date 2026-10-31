@@ -1,0 +1,9 @@
+//Funcion para hacer la conversión de unidades donde cada unidad equivale a 0.25rem.
+@function separacion($unidades) {
+  @return $unidades * 0.25rem;
+}
+
+//Funcion para crear sombra sólida y diagonal, sin desenfoque.
+@function sombra-arcade($distancia, $color) {
+  @return $distancia $distancia 0 $color;
+}

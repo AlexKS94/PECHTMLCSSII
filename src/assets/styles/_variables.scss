@@ -1,0 +1,26 @@
+@use 'sass:color';
+
+//Fuentes
+$fuente-texto: 'Barlow', Arial, sans-serif;
+$fuente-titulos: 'Barlow Condensed', Impact, sans-serif;
+
+//Color textos
+$color-texto-principal: #f4efe3;
+$color-texto-secundario: #c4c3b7;
+
+//Color fondos
+$color-fondo-pagina: #111210;
+$color-fondo-bloques: #1d201b;
+$color-fondo-tarjeta: color.scale($color-fondo-bloques, $lightness: 8%);
+
+//Color utilidad
+$color-destacado: #f5c542;
+$color-decoracion: #680301;
+$color-separacion: #53564b;
+
+//Dimension pantalla
+$pantalla-mediana: 700px;
+$pantalla-grande: 1050px;
+
+//Ancho
+$ancho-contenido: 1160px;

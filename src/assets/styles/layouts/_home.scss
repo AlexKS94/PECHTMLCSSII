@@ -1,0 +1,482 @@
+@use '../variables' as var;
+@use '../funciones' as fun;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  margin: 0;
+  font-family: var.$fuente-texto;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var.$color-texto-principal;
+  background-color: var.$color-fondo-pagina;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var.$color-destacado;
+  outline-offset: 5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var.$color-fondo-pagina;
+  border-bottom: 1px solid var.$color-separacion;
+
+  &__interior {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fun.separacion(4);
+    align-items: center;
+    justify-content: space-between;
+    width: min(100% - 2rem, var.$ancho-contenido);
+    padding-block: fun.separacion(5);
+    margin-inline: auto;
+  }
+
+  &__icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 2rem;
+    color: var.$color-destacado;
+    text-decoration: none;
+
+    &:hover {
+      color: var.$color-texto-principal;
+    }
+  }
+}
+
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: fun.separacion(4);
+
+  &__enlace {
+    padding-block: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: var.$color-destacado;
+      text-decoration: underline;
+      text-underline-offset: 0.3em;
+    }
+  }
+}
+
+.etiqueta {
+  margin-bottom: fun.separacion(4);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var.$color-destacado;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.portada {
+  position: relative;
+  padding: 4rem 1rem;
+  overflow: hidden;
+  background-image:
+    linear-gradient(to right, rgb(0 0 0 / 85%), rgb(0 0 0 / 30%)), url('../../assets/images/portada.jpg');
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: cover;
+  border-bottom: 6px solid var.$color-decoracion;
+  isolation: isolate;
+
+  &::before {
+    position: absolute;
+    top: -20%;
+    right: 15%;
+    z-index: -1;
+    width: 3rem;
+    height: 150%;
+    content: '';
+    background-color: var.$color-decoracion;
+    opacity: 0.4;
+    transform: rotate(25deg);
+  }
+
+  &__interior {
+    max-width: var.$ancho-contenido;
+    margin-inline: auto;
+  }
+
+  &__titulo {
+    margin-bottom: fun.separacion(8);
+    font-family: var.$fuente-titulos;
+    font-size: clamp(3.5rem, 12vw, 9rem);
+    font-style: italic;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    text-shadow: fun.sombra-arcade(5px, var.$color-decoracion);
+  }
+
+  &__acento {
+    color: var.$color-destacado;
+  }
+
+  &__descripcion {
+    max-width: 35rem;
+    margin-bottom: fun.separacion(8);
+    color: var.$color-texto-secundario;
+  }
+
+  &__informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    padding: 0;
+    margin: 2rem 0 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  &__cartel {
+    display: none;
+  }
+}
+
+.boton {
+  display: inline-flex;
+  gap: fun.separacion(4);
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  color: var.$color-fondo-pagina;
+  text-align: center;
+  text-decoration: none;
+  background-color: var.$color-destacado;
+  border: 2px solid var.$color-destacado;
+  box-shadow: fun.sombra-arcade(5px, var.$color-decoracion);
+
+  &:hover {
+    color: var.$color-fondo-pagina;
+    background-color: var.$color-texto-principal;
+  }
+
+  &--secundario {
+    color: var.$color-destacado;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.seccion {
+  width: min(100% - 2rem, var.$ancho-contenido);
+  padding-block: 4rem;
+  margin-inline: auto;
+
+  &__cabecera {
+    max-width: 48rem;
+    margin-bottom: fun.separacion(10);
+  }
+
+  &__titulo {
+    margin-bottom: fun.separacion(5);
+    font-family: var.$fuente-titulos;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+
+  &__descripcion {
+    margin-bottom: 0;
+    color: var.$color-texto-secundario;
+  }
+
+  &--temporadas {
+    border-top: 1px solid var.$color-separacion;
+    border-bottom: 1px solid var.$color-separacion;
+  }
+}
+
+.personajes-principales {
+  display: grid;
+  gap: fun.separacion(6);
+}
+
+.tarjeta-personaje {
+  min-width: 0;
+  background-color: var.$color-fondo-bloques;
+  border: 2px solid var.$color-separacion;
+
+  &:hover {
+    border-color: var.$color-destacado;
+  }
+
+  &__retrato {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background-color: var.$color-fondo-pagina;
+    border-bottom: 5px solid var.$color-decoracion;
+  }
+
+  &__imagen {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &__contenido {
+    padding: fun.separacion(6);
+  }
+
+  &__etiqueta {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var.$color-destacado;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__nombre {
+    margin-bottom: 1rem;
+    font-family: var.$fuente-titulos;
+    font-size: 1.8rem;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+}
+
+.aviso {
+  padding: fun.separacion(5);
+  font-size: 0.875rem;
+  color: var.$color-destacado;
+  background-color: var.$color-fondo-bloques;
+  border-left: 4px solid var.$color-destacado;
+}
+
+.lista-temporadas {
+  display: grid;
+  gap: fun.separacion(4);
+  margin-top: fun.separacion(8);
+}
+
+.temporada {
+  background-color: var.$color-fondo-bloques;
+  border: 1px solid var.$color-separacion;
+
+  &[open] {
+    border-color: var.$color-destacado;
+  }
+
+  &__resumen {
+    padding: fun.separacion(5);
+    cursor: pointer;
+
+    &::marker {
+      color: var.$color-destacado;
+    }
+
+    &:hover {
+      background-color: var.$color-fondo-tarjeta;
+    }
+  }
+
+  &__numero {
+    margin-right: 0.5rem;
+    font-family: var.$fuente-titulos;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var.$color-destacado;
+  }
+
+  &__titulo {
+    display: inline;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__contenido {
+    padding: fun.separacion(6);
+    color: var.$color-texto-secundario;
+    border-top: 1px solid var.$color-separacion;
+  }
+
+  &__subtitulo {
+    margin-top: fun.separacion(7);
+    margin-bottom: fun.separacion(4);
+    font-size: 0.8rem;
+    color: var.$color-destacado;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+.personajes-temporada {
+  display: grid;
+  gap: fun.separacion(4);
+}
+
+.incorporacion {
+  overflow: hidden;
+  background-color: var.$color-fondo-pagina;
+  border-top: 3px solid var.$color-decoracion;
+
+  &__imagen {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &__contenido {
+    padding: fun.separacion(5);
+  }
+
+  &__nombre {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var.$color-texto-principal;
+  }
+}
+
+.recomendacion {
+  padding: fun.separacion(7);
+  background: linear-gradient(135deg, rgb(245 197 66 / 6%), transparent), var.$color-fondo-bloques;
+  border: 2px solid var.$color-destacado;
+  box-shadow: fun.sombra-arcade(7px, var.$color-decoracion);
+
+  &__texto {
+    max-width: 70ch;
+    color: var.$color-texto-secundario;
+  }
+}
+
+.pie {
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  color: var.$color-texto-secundario;
+  text-align: center;
+  border-top: 1px solid var.$color-separacion;
+
+  &__interior {
+    max-width: var.$ancho-contenido;
+    margin-inline: auto;
+  }
+
+  &__autor {
+    font-weight: 700;
+    color: var.$color-texto-principal;
+  }
+
+  &__enlace {
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      color: var.$color-destacado;
+    }
+  }
+}
+
+@media (min-width: var.$pantalla-mediana) {
+  .portada {
+    padding-block: 6rem;
+  }
+
+  .personajes-principales {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .personajes-temporada {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .temporada__resumen {
+    padding: fun.separacion(6);
+  }
+
+  .temporada__titulo {
+    font-size: 1.2rem;
+  }
+
+  .recomendacion {
+    padding: fun.separacion(12);
+  }
+}
+
+@media (min-width: var.$pantalla-grande) {
+  .personajes-principales {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .portada__cartel {
+    position: absolute;
+    right: max(3rem, calc((100vw - 1160px) / 2));
+    bottom: 8rem;
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: var.$color-destacado;
+    text-align: center;
+    border: 5px solid var.$color-destacado;
+    transform: rotate(-8deg);
+  }
+
+  .portada__cartel strong {
+    font-family: var.$fuente-titulos;
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

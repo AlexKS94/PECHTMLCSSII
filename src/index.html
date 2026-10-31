@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Recomendación de The Walking Dead" />
+    <link rel="stylesheet" href="./assets/styles/main.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:ital,wght@0,700;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <title>The Walking Dead | Sobrevivir es solo el inicio</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <include src="./views/header.html"></include>
+
+    <main id="contenido">
+      <!-- Sección Portada -->
+      <section class="portada" id="inicio" aria-labelledby="titulo-serie">
+        <div class="portada__interior">
+          <p class="etiqueta">El mundo ha cambiado. Sus habitantes también.</p>
+
+          <h1 class="portada__titulo" id="titulo-serie">
+            THE<br />
+            WALKING<br />
+            <span class="portada__acento">DEAD</span>
+          </h1>
+
+          <p class="portada__descripcion">
+            Los muertos caminan. Los vivos deciden hasta dónde están dispuestos a llegar para sobrevivir. Once
+            temporadas cargadas de acción, drama, terror y decisiones imposibles.
+          </p>
+
+          <a class="boton" href="#temporadas">
+            Explorar temporadas
+            <i class="fas fa-radiation" aria-hidden="true"></i>
+          </a>
+
+          <ul class="portada__informacion" aria-label="Datos de la serie">
+            <li>11 temporadas</li>
+            <li>2010–2022</li>
+            <li>Drama y supervivencia</li>
+          </ul>
+        </div>
+
+        <div class="portada__cartel" aria-hidden="true">
+          <span>
+            Alerta
+            <i class="fas fa-radiation" aria-hidden="true"></i>
+          </span>
+          <strong>INFECCIÓN<br />POR VIRUS</strong>
+        </div>
+      </section>
+
+      <!-- Sección Personajes -->
+      <section class="seccion" id="personajes" aria-labelledby="titulo-personajes">
+        <div class="seccion__cabecera">
+          <p class="etiqueta">Los supervivientes</p>
+          <h2 class="seccion__titulo" id="titulo-personajes">Distintos pasados, unidos para sobrevivir</h2>
+          <p class="seccion__descripcion">
+            Un error puede costar caro. Sus distintas formas de afrontar las situacione y superar el miedo son parte del
+            atractivo de la serie.
+          </p>
+        </div>
+
+        <div class="personajes-principales">
+          <article class="tarjeta-personaje">
+            <div class="tarjeta-personaje__retrato">
+              <img
+                class="tarjeta-personaje__imagen"
+                src="./assets/images/rick-grimes.jpg"
+                alt="Rick Grimes"
+                loading="lazy"
+              />
+            </div>
+            <div class="tarjeta-personaje__contenido">
+              <p class="tarjeta-personaje__etiqueta">Responsabilidad</p>
+              <h3 class="tarjeta-personaje__nombre">Rick Grimes</h3>
+              <p>
+                Un ex-policía que intentará proteger a su familia a toda costa y mantener unido al grupo en un mundo
+                donde ya no hay reglas.
+              </p>
+            </div>
+          </article>
+
+          <article class="tarjeta-personaje">
+            <div class="tarjeta-personaje__retrato">
+              <img
+                class="tarjeta-personaje__imagen"
+                src="./assets/images/daryl-dixon.jpg"
+                alt="Daryl Dixon"
+                loading="lazy"
+              />
+            </div>
+            <div class="tarjeta-personaje__contenido">
+              <p class="tarjeta-personaje__etiqueta">Instinto</p>
+              <h3 class="tarjeta-personaje__nombre">Daryl Dixon</h3>
+              <p>
+                Un cazador hábilidoso pero con un pasado oscuro. De carácter reservado pero gran lealtad, se convertirá
+                en la mano derecha del grupo.
+              </p>
+            </div>
+          </article>
+
+          <article class="tarjeta-personaje">
+            <div class="tarjeta-personaje__retrato">
+              <img
+                class="tarjeta-personaje__imagen"
+                src="./assets/images/carol-peletier.jpg"
+                alt="Carol Peletier"
+                loading="lazy"
+              />
+            </div>
+            <div class="tarjeta-personaje__contenido">
+              <p class="tarjeta-personaje__etiqueta">Transformación</p>
+              <h3 class="tarjeta-personaje__nombre">Carol Peletier</h3>
+              <p>
+                Una ama de casa, víctima de abusos. Aún sufrir un pasado horrendo por parte de su marido, es capaz de
+                superarlo y tomar decisiones brillantes que salvarán al grupo.
+              </p>
+            </div>
+          </article>
+
+          <article class="tarjeta-personaje">
+            <div class="tarjeta-personaje__retrato">
+              <img class="tarjeta-personaje__imagen" src="./assets/images/michonne.jpg" alt="Michonne" loading="lazy" />
+            </div>
+            <div class="tarjeta-personaje__contenido">
+              <p class="tarjeta-personaje__etiqueta">Determinación</p>
+              <h3 class="tarjeta-personaje__nombre">Michonne</h3>
+              <p>
+                Una superviviente desconfiada que lo ha perdido todo. Aún haber sufrido un trauma brutal, debe encontrar
+                el equilibrio entre protegerse y volver a confiar.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección de temporadas -->
+      <section class="seccion seccion--temporadas" id="temporadas" aria-labelledby="titulo-temporadas">
+        <div class="seccion__cabecera">
+          <p class="etiqueta">El recorrido</p>
+          <h2 class="seccion__titulo" id="titulo-temporadas">Once temporadas. Ningún lugar es seguro.</h2>
+          <p class="seccion__descripcion">
+            Si quieres saber más sobre una temporada, desplegala para descubrir los puntos iniciales y algunos de los
+            personajes que se incorporan.
+          </p>
+        </div>
+
+        <p class="aviso">
+          <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+          Las siguientes explicaciones de las temporadas pueden contener spoilers.
+        </p>
+
+        <div class="lista-temporadas">
+          <!-- Temporada 1 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">01</span>
+              <h3 class="temporada__titulo">Temporada 1 - Rumbo a Atlanta</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                Rick Grimes despierta de un coma en el hospital y al salir encuentra un mundo devastado y plagado de
+                zombies. La búsqueda de su familia lo lleva hacia Atlanta donde se encontrará con un grupo de
+                supervivientes.
+              </p>
+              <h4 class="temporada__subtitulo">Primeros supervivientes</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/glenn-rhee.jpg"
+                    alt="Glenn Rhee"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Glenn Rhee</h5>
+                    <p>Un joven ingenioso y rápido para encontrar salidas en las situaciones más peligrosas.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/shane-walsh.jpg"
+                    alt="Shane Walsh"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Shane Walsh</h5>
+                    <p>
+                      Ex-policía compañero de Rick y superviviente nato. Oculta un gran secreto que traerá graves
+                      consecuencias.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 2-->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">02</span>
+              <h3 class="temporada__titulo">Temporada 2 - La granja</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                El grupo encuentra una granja habitada por una familia que parece ofrecer un respiro al apocalipsis. La
+                búsqueda de una persona desaparecida y las diferencias en cómo sobrevivir ponen a prueba la convivencia
+                del grupo.
+              </p>
+              <h4 class="temporada__subtitulo">Familiares de la granja</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/maggie-greene.jpg"
+                    alt="Maggie Greene"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Maggie Greene</h5>
+                    <p>Una joven de la granja, hija de Hershel con mucho carácter y determinación.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/hershel-greene.jpg"
+                    alt="Hershel Greene"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Hershel Greene</h5>
+                    <p>Es el propietario de la granja, firme en sus convicciones de salvar a los muertos.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 3 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">03</span>
+              <h3 class="temporada__titulo">Temporada 3 - La cárcel</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                El grupo encuentra una prisión que se convierte en una oportunidad para establecer un hogar seguro.
+                Cerca de la cárcel, hay una población, Woodbury, que tiene otra forma de organización bajo un liderazgo
+                que esconde muchas amenazas.
+              </p>
+              <h4 class="temporada__subtitulo">Personajes relevantes</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/el-gobernador.jpg"
+                    alt="El Gobernador"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">El Gobernador</h5>
+                    <p>Un hombre carismático y a su vez muy autoritario. Es el lider de Woodbury.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/tyreese-williams.jpg"
+                    alt="Tyreese Williams"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Tyreese Williams</h5>
+                    <p>Un superviviente que intenta conservar su humanidad, a pesar de encontrarse entre dos bandos.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 4 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">04</span>
+              <h3 class="temporada__titulo">Temporada 4 - Frentes abiertos</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                La vida en la prisión afronta varias amenazas. La seguridad de la carcel se pone a prueba por culpa de
+                una epidemia y por un antiguo adversario.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevos miembros</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/abraham-ford.jpg"
+                    alt="Abraham Ford"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Abraham Ford</h5>
+                    <p>Un antiguo militar decidido a completar su misión.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/rosita-espinosa.jpg"
+                    alt="Rosita Espinosa"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Rosita Espinosa</h5>
+                    <p>
+                      Práctica y preparada para afrontar el peligro, esta dispuesta a completar la misión junto a
+                      Abraham.
+                    </p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/eugene-porter.jpg"
+                    alt="Eugene Porter"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Eugene Porter</h5>
+                    <p>Sus conocimientos se convierten en su principal recurso para sobrevivir.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 5 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">05</span>
+              <h3 class="temporada__titulo">Temporada 5 - Terminus</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                La experiencia en Terminus refuerza la desconfianza del grupo. Tras nuevos peligros en el viaje,
+                Alexandria presenta un nuevo reto, volver a vivir en comunidad pero sin bajar la guardia.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevos miembros</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/gabriel-stokes.jpg"
+                    alt="Gabriel Stokes"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Gabriel Stokes</h5>
+                    <p>Un sacerdote marcado por el miedo y la culpa.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/aaron.jpg" alt="Aaron" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Aaron</h5>
+                    <p>Un reclutador que busca personas para Alexandria.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 6 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">06</span>
+              <h3 class="temporada__titulo">Temporada 6 - Nuevas relaciones</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                Alexandria debe demostrar que puede defenderse. El contacto con otras comunidades amplía las
+                posibilidades del grupo, pero también lo enfrenta a una organización muchísimo más poderosa.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevas figuras</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/jesus.jpg" alt="Jesus" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Jesus</h5>
+                    <p>Un hábil explorador que viene de la comunidad de Hilltop.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/negan.jpg" alt="Negan" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Negan</h5>
+                    <p>El líder de los Salvadores, que impondrá sus propias reglas.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 7 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">07</span>
+              <h3 class="temporada__titulo">Temporada 7 - Bajo sus reglas</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                El dominio de los Salvadores transforma la vida de las comunidades. Mientras unas personas aceptan las
+                nuevas condiciones, otras buscan aliados para recuperar su independencia.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevas amistades</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/ezekiel.jpg" alt="Ezekiel" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Ezekiel</h5>
+                    <p>El líder de una comunidad cercana a Alexandría llamada el Reino.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/jerry.jpg" alt="Jerry" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Jerry</h5>
+                    <p>El fiel compañero de Ezekiel, con un carácter cercano y simpático.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 8 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">08</span>
+              <h3 class="temporada__titulo">Temporada 8 - La guerra</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                La alianza de comunidades se enfrenta a los Salvadores. Esto obligará a decidir qué límites pueden
+                cruzarse y qué clase de sociedad debería existir cuando termine la lucha.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevas incorporaciones</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/siddiq.jpg" alt="Siddiq" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Siddiq</h5>
+                    <p>Un superviviente con conocimientos médicos.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/alden.jpg" alt="Alden" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Alden</h5>
+                    <p>Su relación con los Salvadores pone a prueba la confianza.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 9 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">09</span>
+              <h3 class="temporada__titulo">Temporada 9 - Nuevas fronteras</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                La reconstrucción exige cooperación entre comunidades que todavía arrastran heridas. Con el paso del
+                tiempo, aparece una amenaza que cambia la forma de entender a las hordas de caminantes.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevos personajes</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/alpha.jpg" alt="Alpha" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Alpha</h5>
+                    <p>La líder de los Susurradores y con una forma de vida brutal.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/lydia.jpg" alt="Lydia" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Lydia</h5>
+                    <p>Una joven criada bajo las reglas de los Susurradores.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 10 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">10</span>
+              <h3 class="temporada__titulo">Temporada 10 - El miedo</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                La tensión con los Susurradores afecta a las comunidades. El miedo, los recuerdos y el deseo de venganza
+                condicionan las decisiones de estas, mientras nuevos encuentros abren otras posibilidades.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevos miembros</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/princess.jpg" alt="Princess" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Princess</h5>
+                    <p>Una superviviente expresiva y acostumbrada a la soledad.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/virgil.jpg" alt="Virgil" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Virgil</h5>
+                    <p>Un desconocido que busca regresar con su familia.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+          <!-- Temporada 11 -->
+          <details class="temporada">
+            <summary class="temporada__resumen">
+              <span class="temporada__numero" aria-hidden="true">11</span>
+              <h3 class="temporada__titulo">Temporada 11 - La Mancomunidad</h3>
+            </summary>
+            <div class="temporada__contenido">
+              <p>
+                La escasez de alimentos obliga a correr nuevos riesgos. La Mancomunidad ofrece recursos y normalidad a
+                primera vista, pero también traerá desigualdades y conflictos sobre quién merece estar protegido.
+              </p>
+              <h4 class="temporada__subtitulo">Nuevos personajes</h4>
+              <div class="personajes-temporada">
+                <article class="incorporacion">
+                  <img class="incorporacion__imagen" src="./assets/images/mercer.jpg" alt="Mercer" loading="lazy" />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Mercer</h5>
+                    <p>El responsable militar de la Mancomunidad.</p>
+                  </div>
+                </article>
+                <article class="incorporacion">
+                  <img
+                    class="incorporacion__imagen"
+                    src="./assets/images/pamela-milton.jpg"
+                    alt="Pamela Milton"
+                    loading="lazy"
+                  />
+                  <div class="incorporacion__contenido">
+                    <h5 class="incorporacion__nombre">Pamela Milton</h5>
+                    <p>La gobernadora de una sociedad que presume de orden.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Sección Mi opinión-->
+      <section class="seccion" id="recomendacion" aria-labelledby="titulo-recomendacion">
+        <div class="recomendacion">
+          <p class="etiqueta">Vale la pena</p>
+          <h2 class="seccion__titulo" id="titulo-recomendacion">Los zombies son solo el principio de la aventura.</h2>
+
+          <p class="recomendacion__texto">
+            Cuando empiezas a ver the Walking Dead te sientes atrapado por un mundo post-apocalíptico con el que la
+            mayoría de personas han fantaseado. Un mundo plagado de zombies lentos, que inicialmente pueden asustar o
+            causar miedo pero al que te puedes enfrentar si eres astuto e ingenioso. Sin normas, sin rangos, sin leyes,
+            solo se trata de demostrar que puedes sobrevivir bastandote de tus conocimientos. Además, los escenarios que
+            se recogen son muy similares a lo que nos podríamos encontrar si ocurriera algo similar en la vida real.
+            Desconfianza, amistades, lealtad, todo se pone en juego y crean una novela visual que engancha al
+            espectador.
+          </p>
+          <p class="recomendacion__texto">
+            Principalmente recomendaría la serie a todas aquellas personas que disfrutan viendo series de terror, aunque
+            a medida que avanza, lo principal son las historias de los personajes y los dilemas morales que
+            experimentan. Tiene muchos momentos de acción y tensión que te mantienen enganchado al televisor, aunque
+            también se toma tiempo para desarrollar estos conflictos y las relaciones entre los personajes, por lo que
+            te sientes más cercano a ellos y cada muerte genera muchas emociones.
+          </p>
+          <p class="recomendacion__texto">
+            La series contiene muchas situaciones de violencia, así como situaciones muy gore cuando los caminantes
+            atrapan a alguien. Sus once temporadas también requieren su tiempo y algunas son más lentas que otras, pero
+            entre la variedad se encuentra la mágia de esta serie.
+          </p>
+
+          <a class="boton boton--secundario" href="#inicio"> Volver al inicio </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <include src="./views/footer.html"></include>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>
